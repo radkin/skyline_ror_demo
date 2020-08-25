@@ -4,16 +4,13 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def index
-    @products = Products.all
-    if params[:name] && params[:category]
+    @products = Product.all
+    # if params[:name] && params[:category]
       render json: @products
-    else
-      render json: {status: "error", code: 3000,
-        message: "Can't find products without name and category"}
-    end
-
-
-
+    # else
+      # render json: {status: "error", code: 3000,
+        # message: "Can't find products without name and category"}
+    # end
   end
 
   def show
