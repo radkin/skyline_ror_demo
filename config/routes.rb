@@ -1,7 +1,3 @@
 Rails.application.routes.draw do
-  root 'api/v1/products#index'
-
-  resources :products
-
-  get 'api/v1/products' => 'api/v1/products/index'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
