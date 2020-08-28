@@ -7,7 +7,7 @@ module JsonWebToken
 
   def self.decode(token)
     # body = JWT.decode(token, secret_key)[0]
-    body = JWT.decode(token, Rails.application.credentials.dig(:secret_key)[0])
+    body = JWT.decode(token, Rails.application.credentials.dig(:secret_key))[0]['user_id']
     HashWithIndifferentAccess.new body
   rescue
     nil
