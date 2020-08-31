@@ -1,6 +1,10 @@
 # skyline_ror_demo
 ruby on rails backend for skyline
 
+## Distributed Microservices Demo
+"Skyline Ruby on Rails" is part of a complete distributed microservices demo that is fronted by a react-native-demo found [here](https://github.com/radkin/skyline-mobile-demo). 
+![root directory](graphics/ROR_backend_react_native.png)
+
 # Start up dev environment
 recommend rbenv install using [this](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04) link.
 
@@ -139,10 +143,6 @@ bundle exec rails c
 irb(main):012:0> Item.create!(name:'Kayak', category:'Watersports', description:'A boat for one person', price:275)
 ```
 Using this approach you can start running the server.
-
-## Distributed Microservices Demo
-"Skyline Ruby on Rails" is part of a complete distributed microservices demo that is fronted by a react-native-demo found [here](https://github.com/radkin/skyline-mobile-demo). 
-![root directory](graphics/ROR_backend_react_native.png)
 
 ## Author
 radkin@github.com (not a proper email address)
