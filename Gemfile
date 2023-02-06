@@ -42,5 +42,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Avoid Psych4 breaking change for Ruby 3.1.x
-gem 'webpacker', '~>3.0'
 gem 'psych', '< 4'
