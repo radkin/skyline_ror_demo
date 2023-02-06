@@ -69,3 +69,11 @@ yarn-debug.log*
 /public/uploads
 
 /config/credentials/production.key
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore JetBrains
+.idea/

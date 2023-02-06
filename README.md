@@ -10,31 +10,37 @@ recommend rbenv install using [this](https://www.digitalocean.com/community/tuto
 
 OS & Service requirements:
 
-* For Ubuntu 18.04
+* For Ubuntu 22.04
 
 ```bash
 sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 ```
 
 ```bash
-rbenv install 2.6.6
-rbenv global 2.6.6
+rbenv install 3.1.3
+rbenv global 3.1.3
 gem install bundler
 bundle install
 ```
 
 ## Mysql quickstart
 ```bash
-mysqladmin create skyline.dev
 sudo su -
+mysqladmin create skyline.dev
+mysqladmin create skyline.test
 mysql
 CREATE USER 'skyline'@'localhost' IDENTIFIED BY 'skyline';
 grant all privileges on skyline.* to 'skyline'@'localhost';
 flush privileges;
 ```
 
-### Associated Rails quickstart
+### Update Skyline creds in .bashrc 
+`export SKYLINE_CREDS="YOUR_SECRET_PASSWORD"`
+
+### Associated Rails quickstartGRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%' WITH GRANT OPTIONGRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%' WITH GRANT OPTION
 `rake db:schema:load`
+
+_ignore the errors about spell_checker and webpacker.yml_
 
 after the initial load, then use this command for further schema changes
 `rake db:migrate`
@@ -129,7 +135,7 @@ User.create!(email: 'default@email.com' , password: 'aaaa111' , password_confirm
 ```
 **In another console:**
 ```bash
-curl -H "Content-Type: application/json" -X POST -d '{"email":"defaulte@email.com","password":"abc111"}' http://localhost:3000/authenticate
+curl -H "Content-Type: application/json" -X POST -d '{"email":"default@email.com","password":"aaa111"}' http://localhost:3000/authenticate
 ```
 The response will include a key: `{"auth_token":"LONG HASH"}` . Then, use it in your next request:
 ```bash
