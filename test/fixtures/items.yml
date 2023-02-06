@@ -1,9 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
+  name: "Kayak"
+  category: "Watersports"
+  description: "a boat for one person"
+  price: 3000.00
 
 two:
-  name: MyString
-  description: MyText
+  name: "Lifejacket"
+  category: "Watersports"
+  description: "Protective and fashionable"
+  price: 63.21
+
+three:
+  name: "Soccer Ball"
+  category: "Soccer"
+  description: "FIFA-approved size and weight"
+  price: 78.91
+
+four:
+  name: "Corner Flags"
+  category: "Soccer"
+  description: "Give your playing field a professional touch"
+  price: 45.93
